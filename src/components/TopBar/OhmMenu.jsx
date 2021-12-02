@@ -26,13 +26,10 @@ const addTokenToWallet = (tokenSymbol, tokenAddress, address) => async () => {
     let tokenPath;
     let tokenDecimals = TOKEN_DECIMALS;
     switch (tokenSymbol) {
-      case "OHM":
+      case "LHM":
         tokenPath = OhmImg;
         break;
-      case "33T":
-        tokenPath = token33tImg;
-        break;
-      case "gOHM":
+      case "sLHM":
         tokenPath = WsOhmImg;
         tokenDecimals = 18;
         break;
@@ -95,7 +92,7 @@ function OhmMenu() {
     >
       <Button id="ohm-menu-button" size="large" variant="contained" color="secondary" title="OHM" aria-describedby={id}>
         <SvgIcon component={InfoIcon} color="primary" />
-        <Typography className="ohm-menu-button-text">OHM</Typography>
+        <Typography className="ohm-menu-button-text">LHM menu</Typography>
       </Button>
 
       <Popper id={id} open={open} anchorEl={anchorEl} placement="bottom-start" transition>
@@ -111,38 +108,8 @@ function OhmMenu() {
                   >
                     <Button size="large" variant="contained" color="secondary" fullWidth>
                       <Typography align="left">
-                        <Trans>Buy on {new String("Sushiswap")}</Trans>
+                        <Trans>Buy on {new String("Pancakeswap")}</Trans>
                         <SvgIcon component={ArrowUpIcon} htmlColor="#A3A3A3" />
-                      </Typography>
-                    </Button>
-                  </Link>
-
-                  <Link
-                    href={`https://app.uniswap.org/#/swap?inputCurrency=${fraxAddress}&outputCurrency=${OHM_ADDRESS}`}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <Button size="large" variant="contained" color="secondary" fullWidth>
-                      <Typography align="left">
-                        <Trans>Buy on {new String("Uniswap")}</Trans>
-                        <SvgIcon component={ArrowUpIcon} htmlColor="#A3A3A3" />
-                      </Typography>
-                    </Button>
-                  </Link>
-
-                  <Link component={NavLink} to="/wrap" style={{ textDecoration: "none" }}>
-                    <Button size="large" variant="contained" color="secondary" fullWidth>
-                      <Typography align="left">Wrap sOHM</Typography>
-                    </Button>
-                  </Link>
-                </Box>
-
-                <Box component="div" className="data-links">
-                  <Divider color="secondary" className="less-margin" />
-                  <Link href={`https://dune.xyz/shadow/Olympus-(OHM)`} target="_blank" rel="noreferrer">
-                    <Button size="large" variant="contained" color="secondary" fullWidth>
-                      <Typography align="left">
-                        Shadow's Dune Dashboard <SvgIcon component={ArrowUpIcon} htmlColor="#A3A3A3" />
                       </Typography>
                     </Button>
                   </Link>
@@ -152,92 +119,41 @@ function OhmMenu() {
                   <Box className="add-tokens">
                     <Divider color="secondary" />
                     <p>
-                      <Trans>ADD TOKEN TO WALLET</Trans>
+                      <Trans>ADD TOKENS TO WALLET</Trans>
                     </p>
                     <Box display="flex" flexDirection="row" justifyContent="space-between">
                       {OHM_ADDRESS && (
                         <Button
                           variant="contained"
                           color="secondary"
-                          onClick={addTokenToWallet("OHM", OHM_ADDRESS, address)}
+                          onClick={addTokenToWallet("LHM", OHM_ADDRESS, address)}
                         >
                           <SvgIcon
                             component={ohmTokenImg}
                             viewBox="0 0 32 32"
                             style={{ height: "25px", width: "25px" }}
                           />
-                          <Typography variant="body1">OHM</Typography>
+                          <Typography variant="body1">LHM</Typography>
                         </Button>
                       )}
                       {SOHM_ADDRESS && (
                         <Button
                           variant="contained"
                           color="secondary"
-                          onClick={addTokenToWallet("sOHM", SOHM_ADDRESS, address)}
+                          onClick={addTokenToWallet("sLHM", SOHM_ADDRESS, address)}
                         >
                           <SvgIcon
                             component={sOhmTokenImg}
                             viewBox="0 0 100 100"
                             style={{ height: "25px", width: "25px" }}
                           />
-                          <Typography variant="body1">sOHM</Typography>
+                          <Typography variant="body1">sLHM</Typography>
                         </Button>
                       )}
-                      {GOHM_ADDRESS && (
-                        <Button
-                          variant="contained"
-                          color="secondary"
-                          onClick={addTokenToWallet("gOHM", GOHM_ADDRESS, address)}
-                        >
-                          <SvgIcon
-                            component={wsOhmTokenImg}
-                            viewBox="0 0 180 180"
-                            style={{ height: "25px", width: "25px" }}
-                          />
-                          <Typography variant="body1">gOHM</Typography>
-                        </Button>
-                      )}
-                      {PT_TOKEN_ADDRESS && (
-                        <Button
-                          variant="contained"
-                          color="secondary"
-                          onClick={addTokenToWallet("33T", PT_TOKEN_ADDRESS, address)}
-                        >
-                          <SvgIcon
-                            component={t33TokenImg}
-                            viewBox="0 0 1000 1000"
-                            style={{ height: "25px", width: "25px" }}
-                          />
-                          <Typography variant="body1">33T</Typography>
-                        </Button>
-                      )}
+
                     </Box>
                   </Box>
                 ) : null}
-
-                <Divider color="secondary" />
-                <Link
-                  href="https://docs.olympusdao.finance/using-the-website/unstaking_lp"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <Button size="large" variant="contained" color="secondary" fullWidth>
-                    <Typography align="left">
-                      <Trans>Unstake Legacy LP Token</Trans>
-                    </Typography>
-                  </Button>
-                </Link>
-                <Link
-                  href="https://synapseprotocol.com/?inputCurrency=gOHM&outputCurrency=gOHM&outputChain=43114"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <Button size="large" variant="contained" color="secondary" fullWidth>
-                    <Typography align="left">
-                      <Trans>Bridge Tokens</Trans>
-                    </Typography>
-                  </Button>
-                </Link>
               </Paper>
             </Fade>
           );
