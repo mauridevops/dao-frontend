@@ -26,13 +26,10 @@ const addTokenToWallet = (tokenSymbol, tokenAddress, address) => async () => {
     let tokenPath;
     let tokenDecimals = TOKEN_DECIMALS;
     switch (tokenSymbol) {
-      case "OHM":
+      case "LHM":
         tokenPath = OhmImg;
         break;
-      case "33T":
-        tokenPath = token33tImg;
-        break;
-      case "gOHM":
+      case "sLHM":
         tokenPath = WsOhmImg;
         tokenDecimals = 18;
         break;
@@ -95,7 +92,7 @@ function OhmMenu() {
     >
       <Button id="ohm-menu-button" size="large" variant="contained" color="secondary" title="OHM" aria-describedby={id}>
         <SvgIcon component={InfoIcon} color="primary" />
-        <Typography className="ohm-menu-button-text">OHM</Typography>
+        <Typography className="ohm-menu-button-text">LHM menu</Typography>
       </Button>
 
       <Popper id={id} open={open} anchorEl={anchorEl} placement="bottom-start" transition>
