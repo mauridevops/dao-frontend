@@ -194,15 +194,15 @@ export const NEWEST_NETWORK_ID = 43114;
 
 export const NETWORKS: { [key: number]: INetwork } = {
   1: {
-    chainName: "Ethereum",
-    chainId: 1,
+    chainName: "Binance Smart Chain",
+    chainId: 56,
     nativeCurrency: {
       name: "Ethereum",
-      symbol: "ETH",
+      symbol: "BNB",
       decimals: 18,
     },
-    rpcUrls: [""],
-    blockExplorerUrls: ["https://etherscan.io/#/"],
+    rpcUrls: ["https://bsc-dataseed.binance.org/"],
+    blockExplorerUrls: ["https://bscscan.com/#/"],
     image: ethereum,
     imageAltText: "Ethereum Logo",
     uri: () => NodeHelper.getMainnetURI(1),
