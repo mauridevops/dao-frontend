@@ -15,7 +15,7 @@ const lightTheme = {
   paperBg: "rgba(255, 255, 255, 0.6)",
   modalBg: "#FAFAFAEF",
   popoverBg: "rgba(255, 255, 255, 0.95)",
-  menuBg: handleBackdropFilter("rgba(255, 255, 255, 0.5)"),
+  menuBg: handleBackdropFilter("linear-gradient(180deg, rgba(80,157,255,1) 0%, rgba(85,160,255,1) 22%, rgba(228,241,255,1) 64%, rgba(255,255,255,1) 100%);"),
   backdropBg: "rgba(200, 200, 200, 0.4)",
   largeTextColor: "#759AAE",
   activeLinkColor: "#222222",
