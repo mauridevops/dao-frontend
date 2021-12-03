@@ -26,7 +26,6 @@ import "./stake.scss";
 import { useWeb3Context } from "src/hooks/web3Context";
 import { isPendingTxn, txnButtonText } from "src/slices/PendingTxnsSlice";
 import { Skeleton } from "@material-ui/lab";
-import ExternalStakePool from "./ExternalStakePool";
 import { error } from "../../slices/MessagesSlice";
 import { ethers } from "ethers";
 import ZapCta from "../Zap/ZapCta";
@@ -136,11 +135,11 @@ function Stake() {
     // 1st catch if quantity > balance
     let gweiValue = ethers.utils.parseUnits(quantity.toString(), "gwei");
     if (action === "stake" && gweiValue.gt(ethers.utils.parseUnits(ohmBalance, "gwei"))) {
-      return dispatch(error(t`You cannot stake more than your OHM balance.`));
+      return dispatch(error(t`You cannot stake more than your LHM balance.`));
     }
 
     if (action === "unstake" && gweiValue.gt(ethers.utils.parseUnits(sohmBalance, "gwei"))) {
-      return dispatch(error(t`You cannot unstake more than your sOHM balance.`));
+      return dispatch(error(t`You cannot unstake more than your sLHM balance.`));
     }
 
     await dispatch(changeStake({ address, action, value: quantity.toString(), provider, networkID: networkId }));
@@ -188,7 +187,7 @@ function Stake() {
           <Grid container direction="column" spacing={2}>
             <Grid item>
               <div className="card-header">
-                <Typography variant="h5">Single Stake (3, 3)</Typography>
+                <Typography variant="h5">Stake (3, 3)(🌳,🌳)</Typography>
                 <RebaseTimer />
 
                 {address && Number(oldSohmBalance) > 0.01 && (
@@ -257,7 +256,7 @@ function Stake() {
                       </Typography>
                       <Typography variant="h4">
                         {currentIndex ? (
-                          <span data-testid="index-value">{trim(Number(currentIndex), 1)} OHM</span>
+                          <span data-testid="index-value">{trim(Number(currentIndex), 1)} LHM</span>
                         ) : (
                           <Skeleton width="150px" data-testid="index-loading" />
                         )}
@@ -310,14 +309,14 @@ function Stake() {
                               <Typography variant="body1" className="stake-note" color="textSecondary">
                                 {view === 0 ? (
                                   <>
-                                    <Trans>First time staking</Trans> <b>OHM</b>?
+                                    <Trans>First time staking</Trans> <b>LHM</b>?
                                     <br />
                                     <Trans>Please approve Aliwen Dao to use your</Trans> <b>LHM</b>{" "}
                                     <Trans>for staking</Trans>.
                                   </>
                                 ) : (
                                   <>
-                                    <Trans>First time unstaking</Trans> <b>sOHM</b>?
+                                    <Trans>First time unstaking</Trans> <b>sLHM</b>?
                                     <br />
                                     <Trans>Please approve Aliwen Dao to use your</Trans> <b>sLHM</b>{" "}
                                     <Trans>for unstaking</Trans>.
