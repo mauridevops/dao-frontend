@@ -63,12 +63,12 @@ function NavContent() {
 
             {address && (
               <div className="wallet-link">
-                <Link href={`https://etherscan.io/address/${address}`} target="_blank">
-                  {shorten(address)}
                   <Typography variant="h6">
                       <SvgIcon color="primary" />
-                      <Trans>This is Your Wallet Address</Trans>
+                      <Trans>Connected Wallet Address:</Trans>
                     </Typography>
+                <Link href={`https://etherscan.io/address/${address}`} target="_blank">
+                  {shorten(address)}
                 </Link>
               </div>
             )}
