@@ -275,7 +275,7 @@ function Stake() {
                     {modalButton}
                   </div>
                   <Typography variant="h6">
-                    <Trans>Connect your wallet to stake OHM</Trans>
+                    <Trans>Connect your wallet to stake LHM</Trans>
                   </Typography>
                 </div>
               ) : (
@@ -312,14 +312,14 @@ function Stake() {
                                   <>
                                     <Trans>First time staking</Trans> <b>OHM</b>?
                                     <br />
-                                    <Trans>Please approve Olympus Dao to use your</Trans> <b>OHM</b>{" "}
+                                    <Trans>Please approve Aliwen Dao to use your</Trans> <b>LHM</b>{" "}
                                     <Trans>for staking</Trans>.
                                   </>
                                 ) : (
                                   <>
                                     <Trans>First time unstaking</Trans> <b>sOHM</b>?
                                     <br />
-                                    <Trans>Please approve Olympus Dao to use your</Trans> <b>sOHM</b>{" "}
+                                    <Trans>Please approve Aliwen Dao to use your</Trans> <b>sLHM</b>{" "}
                                     <Trans>for unstaking</Trans>.
                                   </>
                                 )}
@@ -443,40 +443,6 @@ function Stake() {
                       </Typography>
                       <Typography variant="body2" color="textSecondary">
                         {isAppLoading ? <Skeleton width="80px" /> : <>{trim(Number(sohmBalance), 4)} sOHM</>}
-                      </Typography>
-                    </div>
-
-                    <div className="data-row" style={{ paddingLeft: "10px" }}>
-                      <Typography variant="body2" color="textSecondary">
-                        <Trans>Staked Balance in Fuse</Trans>
-                      </Typography>
-                      <Typography variant="body2" color="textSecondary">
-                        {isAppLoading ? <Skeleton width="80px" /> : <>{trim(Number(fsohmBalance), 4)} fsOHM</>}
-                      </Typography>
-                    </div>
-
-                    <div className="data-row" style={{ paddingLeft: "10px" }}>
-                      <Typography variant="body2" color="textSecondary">
-                        <Trans>Wrapped Balance</Trans>
-                      </Typography>
-                      <Typography variant="body2" color="textSecondary">
-                        {isAppLoading ? <Skeleton width="80px" /> : <>{trim(Number(wsohmBalance), 4)} wsOHM</>}
-                      </Typography>
-                    </div>
-                    <div className="data-row" style={{ paddingLeft: "10px" }}>
-                      <Typography variant="body2" color="textSecondary">
-                        <Trans>Wrapped Balance in FiatDAO</Trans>
-                      </Typography>
-                      <Typography variant="body2" color="textSecondary">
-                        {isAppLoading ? <Skeleton width="80px" /> : <>{trim(Number(fiatDaowsohmBalance), 4)} wsOHM</>}
-                      </Typography>
-                    </div>
-                    <div className="data-row" style={{ paddingLeft: "10px" }}>
-                      <Typography variant="body2" color="textSecondary">
-                        <Trans>Wrapped Balance</Trans> (v2)
-                      </Typography>
-                      <Typography variant="body2" color="textSecondary">
-                        {isAppLoading ? <Skeleton width="80px" /> : <>{trim(Number(gOhmBalance), 4)} gOHM</>}
                       </Typography>
                     </div>
 
