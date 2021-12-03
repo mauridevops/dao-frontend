@@ -36,9 +36,9 @@ import { getTokenPrice } from "src/helpers";
 //   and include that in the definition of a bond
 export const dai = new StableBond({
   name: "dai",
-  displayName: "DAI",
-  bondToken: "DAI",
-  payoutToken: "OHM",
+  displayName: "BUSD",
+  bondToken: "BUSD",
+  payoutToken: "LHM",
   bondIconSvg: DaiImg,
   bondContractABI: DaiBondContract,
   isAvailable: {
@@ -63,8 +63,8 @@ export const dai = new StableBond({
 
 export const frax = new StableBond({
   name: "frax",
-  displayName: "FRAX",
-  bondToken: "FRAX",
+  displayName: "USDT",
+  bondToken: "USDT",
   payoutToken: "OHM",
   bondIconSvg: FraxImg,
   bondContractABI: FraxBondContract,
@@ -90,13 +90,13 @@ export const frax = new StableBond({
 
 export const lusd = new StableBond({
   name: "lusd",
-  displayName: "LUSD",
-  bondToken: "LUSD",
+  displayName: "USDC",
+  bondToken: "USDC",
   payoutToken: "OHM",
   bondIconSvg: LusdImg,
   bondContractABI: LusdBondContract,
   isAvailable: {
-    [NetworkID.Mainnet]: false,
+    [NetworkID.Mainnet]: true,
     [NetworkID.Testnet]: true,
     [NetworkID.Arbitrum]: false,
     [NetworkID.ArbitrumTestnet]: false,
@@ -117,10 +117,10 @@ export const lusd = new StableBond({
 
 export const eth = new CustomBond({
   name: "eth",
-  displayName: "wETH",
+  displayName: "wBNB",
   lpUrl: "",
   bondType: BondType.StableAsset,
-  bondToken: "wETH",
+  bondToken: "wBNB",
   payoutToken: "OHM",
   bondIconSvg: wETHImg,
   bondContractABI: EthBondContract,
@@ -165,7 +165,7 @@ export const cvx = new CustomBond({
   bondContractABI: CvxBondContract,
   reserveContract: ierc20Abi, // The Standard ierc20Abi since they're normal tokens
   isAvailable: {
-    [NetworkID.Mainnet]: true,
+    [NetworkID.Mainnet]: false,
     [NetworkID.Testnet]: true,
     [NetworkID.Arbitrum]: false,
     [NetworkID.ArbitrumTestnet]: false,
@@ -233,14 +233,14 @@ export const cvx_expired = new CustomBond({
 
 export const ohm_dai = new LPBond({
   name: "ohm_dai_lp",
-  displayName: "OHM-DAI LP",
-  bondToken: "DAI",
+  displayName: "OHM-BUSD LP",
+  bondToken: "BUSD",
   payoutToken: "OHM",
   bondIconSvg: OhmDaiImg,
   bondContractABI: BondOhmDaiContract,
   reserveContract: ReserveOhmDaiContract,
   isAvailable: {
-    [NetworkID.Mainnet]: false,
+    [NetworkID.Mainnet]: true,
     [NetworkID.Testnet]: true,
     [NetworkID.Arbitrum]: false,
     [NetworkID.ArbitrumTestnet]: false,
@@ -263,8 +263,8 @@ export const ohm_dai = new LPBond({
 
 export const ohm_frax = new LPBond({
   name: "ohm_frax_lp",
-  displayName: "OHM-FRAX LP",
-  bondToken: "FRAX",
+  displayName: "OHM-BNB LP",
+  bondToken: "BNB",
   payoutToken: "OHM",
   bondIconSvg: OhmFraxImg,
   bondContractABI: FraxOhmBondContract,
@@ -331,7 +331,7 @@ export const ohm_weth = new CustomBond({
   bondContractABI: BondOhmEthContract,
   reserveContract: ReserveOhmEthContract,
   isAvailable: {
-    [NetworkID.Mainnet]: true,
+    [NetworkID.Mainnet]: false,
     [NetworkID.Testnet]: true,
     [NetworkID.Arbitrum]: false,
     [NetworkID.ArbitrumTestnet]: false,
