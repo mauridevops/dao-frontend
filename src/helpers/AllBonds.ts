@@ -240,7 +240,7 @@ export const ohm_dai = new LPBond({
   bondContractABI: BondOhmDaiContract,
   reserveContract: ReserveOhmDaiContract,
   isAvailable: {
-    [NetworkID.Mainnet]: true,
+    [NetworkID.Mainnet]: false,
     [NetworkID.Testnet]: true,
     [NetworkID.Arbitrum]: false,
     [NetworkID.ArbitrumTestnet]: false,
