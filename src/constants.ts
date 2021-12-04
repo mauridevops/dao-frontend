@@ -141,7 +141,7 @@ export const addresses: IAddresses = {
     // MIGRATOR_ADDRESS: ""
   }, // TODO: Avalanche Testnet addresses
   43114: {
-    DAI_ADDRESS: "",
+    DAI_ADDRESS: "0x8301F2213c0eeD49a7E28Ae4c3e91722919B8B47",
     OHM_ADDRESS: "",
     // STAKING_ADDRESS: "", // The new staking contract
     STAKING_HELPER_ADDRESS: "", // Helper contract used for Staking only
@@ -264,15 +264,15 @@ export const NETWORKS: { [key: number]: INetwork } = {
     uri: () => EnvHelper.alchemyAvalancheTestnetURI,
   },
   43114: {
-    chainName: "Avalanche Mainnet",
+    chainName: "BSC TESTNET",
     chainId: 43114,
     nativeCurrency: {
-      name: "AVAX",
-      symbol: "AVAX",
+      name: "BNB",
+      symbol: "BNB",
       decimals: 18,
     },
-    rpcUrls: ["https://api.avax.network/ext/bc/C/rpc"],
-    blockExplorerUrls: ["https://cchain.explorer.avax.network/"],
+    rpcUrls: ["https://data-seed-prebsc-1-s1.binance.org:8545/"],
+    blockExplorerUrls: ["https://testnet.bscscan.com/#"],
     image: avalanche,
     imageAltText: "Avalanche Logo",
     uri: () => NodeHelper.getMainnetURI(43114),
