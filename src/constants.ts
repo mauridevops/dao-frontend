@@ -205,7 +205,7 @@ export const NETWORKS: { [key: number]: INetwork } = {
     blockExplorerUrls: ["https://bscscan.com/#/"],
     image: ethereum,
     imageAltText: "Ethereum Logo",
-    uri: () => NodeHelper.getMainnetURI(1),
+    uri: () => NodeHelper.getMainnetURI(56),
   },
   4: {
     chainName: "Rinkeby Testnet",
