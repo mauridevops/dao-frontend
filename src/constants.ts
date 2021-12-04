@@ -201,7 +201,7 @@ export const NETWORKS: { [key: number]: INetwork } = {
       symbol: "ETH",
       decimals: 18,
     },
-    rpcUrls: [""],
+    rpcUrls: ["https://data-seed-prebsc-1-s1.binance.org:8545/"],
     blockExplorerUrls: ["https://etherscan.io/#/"],
     image: ethereum,
     imageAltText: "Ethereum Logo",
