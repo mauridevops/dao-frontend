@@ -208,15 +208,15 @@ export const NETWORKS: { [key: number]: INetwork } = {
     uri: () => NodeHelper.getMainnetURI(1),
   },
   4: {
-    chainName: "Rinkeby Testnet",
+    chainName: "BSC Testnet", // rynkerby
     chainId: 4,
     nativeCurrency: {
-      name: "Ethereum",
-      symbol: "ETH",
+      name: "BNB",
+      symbol: "BNB",
       decimals: 18,
     },
-    rpcUrls: [""],
-    blockExplorerUrls: ["https://rinkeby.etherscan.io/#/"],
+    rpcUrls: ["https://data-seed-prebsc-1-s1.binance.org:8545/"],
+    blockExplorerUrls: ["https://testnet.bscscan.com/#"],
     image: ethereum,
     imageAltText: "Ethereum Logo",
     uri: () => NodeHelper.getMainnetURI(4),
