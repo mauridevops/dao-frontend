@@ -52,7 +52,7 @@ export const addresses: IAddresses = {
     STAKING_V2: "0x06984c3A9EB8e3A8df02A4C09770D5886185792D",
   },
   1: {
-    DAI_ADDRESS: "0x6b175474e89094c44da98b954eedeac495271d0f", // duplicate
+    DAI_ADDRESS: "0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56", // duplicate // << BUSD
     OHM_ADDRESS: "0x383518188c0c6d7730d91b2c03a03c837814a899",
     STAKING_ADDRESS: "0xfd31c7d00ca47653c6ce64af53c1571f9c36566a", // The new staking contract
     STAKING_HELPER_ADDRESS: "0xc8c436271f9a6f10a5b80c8b8ed7d0e8f37a612d", // Helper contract used for Staking only
@@ -186,11 +186,11 @@ interface INetwork {
 
 // These networks will be available for users to select. Other networks may be functional
 // (e.g. testnets, or mainnets being prepared for launch) but need to be selected directly via the wallet.
-export const USER_SELECTABLE_NETWORKS = [1, 42161, 43114];
+export const USER_SELECTABLE_NETWORKS = [1, 42161];
 
 // Set this to the chain number of the most recently added network in order to enable the 'Now supporting X network'
 // message in the UI. Set to -1 if we don't want to display the message at the current time.
-export const NEWEST_NETWORK_ID = 43114;
+export const NEWEST_NETWORK_ID = -1;
 
 export const NETWORKS: { [key: number]: INetwork } = {
   1: {
@@ -222,7 +222,7 @@ export const NETWORKS: { [key: number]: INetwork } = {
     uri: () => NodeHelper.getMainnetURI(4),
   },
   42161: {
-    chainName: "Arbitrum",
+    chainName: "Binance Smart Chain TEST NETWORK",
     chainId: 42161,
     nativeCurrency: {
       name: "Ethereum",
