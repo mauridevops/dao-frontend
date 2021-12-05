@@ -52,7 +52,7 @@ export const addresses: IAddresses = {
     STAKING_V2: "0x06984c3A9EB8e3A8df02A4C09770D5886185792D",
   },
   1: {
-    DAI_ADDRESS: "0x6b175474e89094c44da98b954eedeac495271d0f", // duplicate
+    DAI_ADDRESS: "0x6b175474e89094c44da98b954eedeac495271d0", // duplicate
     OHM_ADDRESS: "0x383518188c0c6d7730d91b2c03a03c837814a899",
     STAKING_ADDRESS: "0xfd31c7d00ca47653c6ce64af53c1571f9c36566a", // The new staking contract
     STAKING_HELPER_ADDRESS: "0xc8c436271f9a6f10a5b80c8b8ed7d0e8f37a612d", // Helper contract used for Staking only
