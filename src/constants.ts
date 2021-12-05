@@ -186,23 +186,23 @@ interface INetwork {
 
 // These networks will be available for users to select. Other networks may be functional
 // (e.g. testnets, or mainnets being prepared for launch) but need to be selected directly via the wallet.
-export const USER_SELECTABLE_NETWORKS = [1, 42161, 43114];
+export const USER_SELECTABLE_NETWORKS = [1];
 
 // Set this to the chain number of the most recently added network in order to enable the 'Now supporting X network'
 // message in the UI. Set to -1 if we don't want to display the message at the current time.
-export const NEWEST_NETWORK_ID = 43114;
+export const NEWEST_NETWORK_ID = -1;
 
 export const NETWORKS: { [key: number]: INetwork } = {
   1: {
-    chainName: "Ethereum",
+    chainName: "Binance Smart Chain",
     chainId: 1,
     nativeCurrency: {
-      name: "Ethereum",
-      symbol: "ETH",
+      name: "BNB",
+      symbol: "BNB",
       decimals: 18,
     },
-    rpcUrls: ["https://data-seed-prebsc-1-s1.binance.org:8545/"],
-    blockExplorerUrls: ["https://etherscan.io/#/"],
+    rpcUrls: [""],
+    blockExplorerUrls: ["https://bscscan.com/#"],
     image: ethereum,
     imageAltText: "Ethereum Logo",
     uri: () => NodeHelper.getMainnetURI(1),

@@ -11,7 +11,7 @@ export class EnvHelper {
    * @returns `process.env`
    */
   static env = process.env;
-  // static alchemyEthereumTestnetURI = `https://eth-rinkeby.alchemyapi.io/v2/${EnvHelper.env.REACT_APP_ETHEREUM_TESTNET_ALCHEMY}`;
+  //static alchemyEthereumTestnetURI = `https://bsc-mainnet.nodereal.io/v1/${EnvHelper.env.REACT_APP_ETHEREUM_TESTNET_ALCHEMY}`;
   static alchemyArbitrumTestnetURI = `https://arb-rinkeby.g.alchemy.com/v2/${EnvHelper.env.REACT_APP_ARBITRUM_TESTNET_ALCHEMY}`;
   static alchemyAvalancheTestnetURI = ``;
 
@@ -55,9 +55,9 @@ export class EnvHelper {
         ) {
           ALCHEMY_ID_LIST = EnvHelper.env.REACT_APP_ETHEREUM_ALCHEMY_IDS.split(EnvHelper.whitespaceRegex);
         } else {
-          ALCHEMY_ID_LIST = ["_gg7wSSi0KMBsdKnGVfHDueq6xMB9EkC"];
+          ALCHEMY_ID_LIST = ["7c63eb53cf7f48c981c2cb0390f935e4"];
         }
-        uriPath = "https://eth-mainnet.alchemyapi.io/v2/";
+        uriPath = "https://bsc-mainnet.nodereal.io/v1/";
         break;
       case 4:
         if (
@@ -115,7 +115,7 @@ export class EnvHelper {
 
     // now add the uri path
     if (INFURA_ID_LIST.length > 0) {
-      INFURA_ID_LIST = INFURA_ID_LIST.map(infuraID => `https://mainnet.infura.io/v3/${infuraID}`);
+      INFURA_ID_LIST = INFURA_ID_LIST.map(infuraID => `https://bsc-mainnet.nodereal.io/v1/${infuraID}`);
     } else {
       INFURA_ID_LIST = [];
     }
