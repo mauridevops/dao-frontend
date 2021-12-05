@@ -202,7 +202,7 @@ export const NETWORKS: { [key: number]: INetwork } = {
       decimals: 18,
     },
     rpcUrls: [""],
-    blockExplorerUrls: ["https://bscscan.com/#"],
+    blockExplorerUrls: ["https://testnet.bscscan.com/#"],
     image: ethereum,
     imageAltText: "Ethereum Logo",
     uri: () => NodeHelper.getMainnetURI(1),
