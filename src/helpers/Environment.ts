@@ -55,9 +55,9 @@ export class EnvHelper {
         ) {
           ALCHEMY_ID_LIST = EnvHelper.env.REACT_APP_ETHEREUM_ALCHEMY_IDS.split(EnvHelper.whitespaceRegex);
         } else {
-          ALCHEMY_ID_LIST = ["7c63eb53cf7f48c981c2cb0390f935e4"];
+          ALCHEMY_ID_LIST = ["dbcffbd1-9aec-4b60-bd82-0a0c88c8f340"];
         }
-        uriPath = "https://bsc-mainnet.nodereal.io/v1/";
+        uriPath = "https://bsc.getblock.io/testnet/?api_key=";
         break;
       case 4:
         if (
